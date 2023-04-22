@@ -6,15 +6,11 @@ import {
     Toolbar,
     Container,
     Grid,
-    Button,
-    Card,
-    CardMedia,
-    CardContent,
-    CardActions
+    Button
 } from '@material-ui/core'
 import {PhotoCamera} from '@material-ui/icons';
 import useStyles from "./styles";
-
+import {DummyCard} from "./components/DummyCard";
 
 function App() {
     const classes = useStyles();
@@ -62,25 +58,7 @@ function App() {
                     <Grid container={true} spacing={4}>
                         {cards.map((card) => (
                             <Grid item={true} key={card} xs={12} sm={6} md={4} className={classes.cardGrid}>
-                                <Card className={classes.card}>
-                                    <CardMedia
-                                        className={classes.cardMedia}
-                                        image={'http://source.unsplash.com/random'}
-                                        title={'Some Randome Title'}
-                                    />
-                                    <CardContent className={classes.cardContent}>
-                                        <Typography gutterBottom={true} variant={'h5'}>
-                                            Heading
-                                        </Typography>
-                                        <Typography>
-                                            This is a media card you can use it for media content
-                                        </Typography>
-                                        <CardActions>
-                                            <Button size={'small'} color={'primary'}>View</Button>
-                                            <Button size={'small'} color={'primary'}>Edit</Button>
-                                        </CardActions>
-                                    </CardContent>
-                                </Card>
+                                <DummyCard classes={classes} />
                             </Grid>
                         ))}
                     </Grid>
