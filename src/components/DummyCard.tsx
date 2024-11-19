@@ -7,7 +7,7 @@ export function DummyCard(props: { classes: any }) {
         <Card className={classes.card}>
             <CardMedia
                 className={classes.cardMedia}
-                image={'http://source.unsplash.com/random'}
+                image={'https://picsum.photos/500/600'}
                 title={'Some Randome Title'}
             />
             <CardContent className={classes.cardContent}>
